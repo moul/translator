@@ -1,5 +1,5 @@
-hash: e9b1fc0d7066847fc5dc35098014df5977367ce1bc8bc0e17eb0f5f87982089b
-updated: 2016-12-14T20:30:56.339900997+01:00
+hash: 59bfde2ab577821d06868ad01f9bbea0d86ab4e2881cf772fb46182acc3ee087
+updated: 2016-12-14T20:33:16.170365088+01:00
 imports:
 - name: github.com/gogo/protobuf
   version: 909568be09de550ed094403c2bf8a261b5bb730a
@@ -9,6 +9,8 @@ imports:
   version: 98fa357170587e470c5f27d3c3ea0947b71eb455
   subpackages:
   - proto
+- name: github.com/moul/protoc-gen-gotemplate
+  version: 2ae75f6702032169b038eba8e328000ae031bd97
 - name: golang.org/x/net
   version: 3fe3024eef808ba2798cc1855690f49e2b860573
   subpackages:

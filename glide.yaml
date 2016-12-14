@@ -9,3 +9,4 @@ import:
   - context
 - package: google.golang.org/grpc
   version: ^1.0.5
+- package: github.com/moul/protoc-gen-gotemplate
