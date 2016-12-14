@@ -1,2 +1,2 @@
-pb/translator.pb.go: translator.proto
-	protoc --gogo_out=plugins=grpc:pb ./translator.proto
+pb/translator.pb.go: pb/translator.proto
+	cd pb; protoc --gogo_out=plugins=grpc:. ./translator.proto
