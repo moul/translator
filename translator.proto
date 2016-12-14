@@ -1,6 +1,8 @@
-syntax "proto3";
+syntax = "proto3";
 
 package translator;
+
+option go_package = "translatorpb";
 
 service TranslatorService {
   rpc Translate(TranslateRequest) returns (TranslateResponse) {}
@@ -9,10 +11,10 @@ service TranslatorService {
 message TranslateRequest {
   string message = 1;
   string language = 2;
-  repeated any arguments = 3;
+  repeated string arguments = 3;  // FIXME: should be any
 }
 
-message TrnslateResponse {
+message TranslateResponse {
   string message = 1;
   string err_msg = 2;
 }
