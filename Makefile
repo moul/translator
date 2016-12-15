@@ -1,7 +1,10 @@
+SOURCES := cmd/translator/main.go service/service.go
+
 .PHONY: build
 build: translator
 
-translator: pb/translator.pb.go gen/.generated
+translator: pb/translator.pb.go gen/.generated $(SOURCES)
+	go build -o translator ./cmd/translator
 
 pb/translator.pb.go: pb/translator.proto
 	cd pb; protoc --gogo_out=plugins=grpc:. ./translator.proto
