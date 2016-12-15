@@ -1,5 +1,5 @@
 hash: 59bfde2ab577821d06868ad01f9bbea0d86ab4e2881cf772fb46182acc3ee087
-updated: 2016-12-15T16:21:28.948778905+01:00
+updated: 2016-12-15T16:30:54.61137036+01:00
 imports:
 - name: github.com/go-kit/kit
   version: 411d3c2e71f00f2c28d573f8e3a0df901297d4a0
@@ -25,7 +25,7 @@ imports:
 - name: github.com/kr/logfmt
   version: b84e30acd515aadc4b783ad4ff83aff3299bdfe0
 - name: github.com/moul/protoc-gen-gotemplate
-  version: 8e2be0f866f997e03e764a496837bb7f39805212
+  version: d3abcca373ca0a62770b613b265e4b21a6ebd7f1
 - name: golang.org/x/net
   version: 468bac874d80e6ca892ecbb9bf09c72519b5b751
   subpackages:
