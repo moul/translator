@@ -10,3 +10,6 @@ import:
 - package: google.golang.org/grpc
   version: ^1.0.5
 - package: github.com/moul/protoc-gen-gotemplate
+- package: github.com/chai2010/gettext-go
+  subpackages:
+  - gettext

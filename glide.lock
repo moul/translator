@@ -1,6 +1,10 @@
-hash: 59bfde2ab577821d06868ad01f9bbea0d86ab4e2881cf772fb46182acc3ee087
-updated: 2016-12-15T16:30:54.61137036+01:00
+hash: e9de29f313810e9e5244b7fbddf6bb9e335c0fc9caa5d4107850695545455e15
+updated: 2016-12-15T16:52:20.144816686+01:00
 imports:
+- name: github.com/chai2010/gettext-go
+  version: c6fed771bfd517099caf0f7a961671fa8ed08723
+  subpackages:
+  - gettext
 - name: github.com/go-kit/kit
   version: 411d3c2e71f00f2c28d573f8e3a0df901297d4a0
   subpackages:
