@@ -14,9 +14,9 @@ import (
 	"google.golang.org/grpc"
 
 	"github.com/moul/translator/gen/endpoints"
+	"github.com/moul/translator/gen/pb"
 	"github.com/moul/translator/gen/transports/grpc"
 	"github.com/moul/translator/gen/transports/http"
-	"github.com/moul/translator/pb"
 	"github.com/moul/translator/service"
 )
 

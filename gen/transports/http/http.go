@@ -8,10 +8,10 @@ import (
 	"encoding/json"
 	context "golang.org/x/net/context"
 
-	pb "github.com/moul/protoc-gen-gotemplate/examples/go-kit/services/translator/gen/pb"
+        pb "github.com/moul/translator/gen/pb"
         gokit_endpoint "github.com/go-kit/kit/endpoint"
-	httptransport "github.com/go-kit/kit/transport/http"
-	endpoints "github.com/moul/protoc-gen-gotemplate/examples/go-kit/services/translator/gen/endpoints"
+        httptransport "github.com/go-kit/kit/transport/http"
+        endpoints "github.com/moul/translator/gen/endpoints"
 )
 
 

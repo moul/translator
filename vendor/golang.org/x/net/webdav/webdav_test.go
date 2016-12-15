@@ -18,6 +18,8 @@ import (
 	"sort"
 	"strings"
 	"testing"
+
+	"golang.org/x/net/context"
 )
 
 // TODO: add tests to check XML responses with the expected prefix path
@@ -48,7 +50,7 @@ func TestPrefix(t *testing.T) {
 			req.Header.Add(headers[0], headers[1])
 			headers = headers[2:]
 		}
-		res, err := http.DefaultClient.Do(req)
+		res, err := http.DefaultTransport.RoundTrip(req)
 		if err != nil {
 			return nil, err
 		}
@@ -65,6 +67,7 @@ func TestPrefix(t *testing.T) {
 		"/a/b/",
 		"/a/b/c/",
 	}
+	ctx := context.Background()
 	for _, prefix := range prefixes {
 		fs := NewMemFS()
 		h := &Handler{
@@ -183,7 +186,7 @@ func TestPrefix(t *testing.T) {
 			continue
 		}
 
-		got, err := find(nil, fs, "/")
+		got, err := find(ctx, nil, fs, "/")
 		if err != nil {
 			t.Errorf("prefix=%-9q find: %v", prefix, err)
 			continue
@@ -297,14 +300,15 @@ func TestFilenameEscape(t *testing.T) {
 		wantHref:        `/go%3Clang`,
 		wantDisplayName: `go&lt;lang`,
 	}}
+	ctx := context.Background()
 	fs := NewMemFS()
 	for _, tc := range testCases {
 		if strings.HasSuffix(tc.name, "/") {
-			if err := fs.Mkdir(tc.name, 0755); err != nil {
+			if err := fs.Mkdir(ctx, tc.name, 0755); err != nil {
 				t.Fatalf("name=%q: Mkdir: %v", tc.name, err)
 			}
 		} else {
-			f, err := fs.OpenFile(tc.name, os.O_CREATE, 0644)
+			f, err := fs.OpenFile(ctx, tc.name, os.O_CREATE, 0644)
 			if err != nil {
 				t.Fatalf("name=%q: OpenFile: %v", tc.name, err)
 			}

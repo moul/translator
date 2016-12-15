@@ -1,20 +1,36 @@
 hash: 59bfde2ab577821d06868ad01f9bbea0d86ab4e2881cf772fb46182acc3ee087
-updated: 2016-12-14T20:33:16.170365088+01:00
+updated: 2016-12-15T16:21:28.948778905+01:00
 imports:
+- name: github.com/go-kit/kit
+  version: 411d3c2e71f00f2c28d573f8e3a0df901297d4a0
+  subpackages:
+  - endpoint
+  - log
+  - transport/grpc
+  - transport/http
+- name: github.com/go-logfmt/logfmt
+  version: 390ab7935ee28ec6b286364bba9b4dd6410cb3d5
+- name: github.com/go-stack/stack
+  version: 100eb0c0a9c5b306ca2fb4f165df21d80ada4b82
 - name: github.com/gogo/protobuf
   version: 909568be09de550ed094403c2bf8a261b5bb730a
   subpackages:
   - proto
 - name: github.com/golang/protobuf
-  version: 98fa357170587e470c5f27d3c3ea0947b71eb455
+  version: 8ee79997227bf9b34611aee7946ae64735e6fd93
   subpackages:
   - proto
+- name: github.com/gorilla/handlers
+  version: 3a5767ca75ece5f7f1440b1d16975247f8d8b221
+- name: github.com/kr/logfmt
+  version: b84e30acd515aadc4b783ad4ff83aff3299bdfe0
 - name: github.com/moul/protoc-gen-gotemplate
-  version: 2ae75f6702032169b038eba8e328000ae031bd97
+  version: 8e2be0f866f997e03e764a496837bb7f39805212
 - name: golang.org/x/net
-  version: 3fe3024eef808ba2798cc1855690f49e2b860573
+  version: 468bac874d80e6ca892ecbb9bf09c72519b5b751
   subpackages:
   - context
+  - context/ctxhttp
   - http2
   - http2/hpack
   - idna

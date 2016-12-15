@@ -3,7 +3,7 @@ package translatorsvc
 import (
 	"fmt"
 
-	"github.com/moul/translator/pb"
+	"github.com/moul/translator/gen/pb"
 	"golang.org/x/net/context"
 )
 

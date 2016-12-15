@@ -4,8 +4,9 @@ package translator_endpoints
 
 import (
 	"fmt"
+
 	context "golang.org/x/net/context"
-	pb "github.com/moul/protoc-gen-gotemplate/examples/go-kit/services/translator/gen/pb"
+        pb "github.com/moul/translator/gen/pb"
 	"github.com/go-kit/kit/endpoint"
 )
 
@@ -29,7 +30,7 @@ func (e *Endpoints)Translate(ctx context.Context, in *pb.TranslateRequest) (*pb.
 
 
 func MakeTranslateEndpoint(svc pb.TranslatorServiceServer) endpoint.Endpoint {
-	return func(ctx context.Context, request interface{}) (interface{}, error) {
+     	return func(ctx context.Context, request interface{}) (interface{}, error) {
 		req := request.(*pb.TranslateRequest)
 		rep, err := svc.Translate(ctx, req)
 		if err != nil {
