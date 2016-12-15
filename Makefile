@@ -1,3 +1,4 @@
+DOCKER_IMAGE ?=	moul/translator
 SOURCES := cmd/translator/main.go service/service.go
 MO_FILES := $(shell find locales -name "*.po" | sed 's/\.po/\.mo/g')
 
@@ -18,3 +19,15 @@ gen/.generated:	pb/translator.proto
 
 %.mo: %.po
 	msgfmt -o $@ $<
+
+.PHONY: install
+install:
+	go install ./cmd/translator
+
+.PHONY: docker.build
+docker.build:
+	docker build -t $(DOCKER_IMAGE) .
+
+.PHONY: docker.run
+docker.run:
+	docker run -p 8000:8000 -p 9000:9000 $(DOCKER_IMAGE)
