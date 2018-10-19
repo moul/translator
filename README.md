@@ -1,4 +1,7 @@
 # translator
+
+[![GuardRails badge](https://badges.production.guardrails.io/moul/translator.svg)](https://www.guardrails.io)
+
 :microphone: Translator micro-service
 
 A translation micro-service using [Gettext](https://www.gnu.org/software/gettext/), [Protobuf](https://github.com/google/protobuf) and [Go-Kit](https://github.com/go-kit/kit), with more that 75% boilerplate code generated automatically using [protoc-gen-gotemplate](https://github.com/moul/protoc-gen-gotemplate).
